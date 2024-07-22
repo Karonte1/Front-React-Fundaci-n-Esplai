@@ -1,0 +1,28 @@
+---
+layout: '../../layouts/PostLayout.astro'
+title: Cómo hacer un contador en React
+date: 2024-07-02
+description: Esxplicación paso a paso de cómo hacer un contador en React
+img: 
+  src: https://picsum.photos/id/9/500/300
+  alt: Foto de un ordenador
+tags: [programacion, react]
+---
+
+import Counter from '../../components/Counter.jsx';
+import PostGridItem from '../../components/PostGridItem.astro';
+
+# ¿Cómo hacer un contador en React
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odit cumque dolore nisi itaque minus molestias numquam quae libero, exercitationem quo inventore enim eius iure deleniti commodi ut necessitatibus perferendis?
+
+Descripcion {frontmatter.description}
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, nam voluptates! Eius nulla aliquam, debitis cupiditate cumque reprehenderit recusandae, laboriosam quo qui quod excepturi perferendis dolor pariatur illum eaque voluptate atque iste? Nisi ad libero incidunt dicta perspiciatis iusto accusamus sequi, mollitia corporis quis, neque vitae sapiente cupiditate beatae magni delectus fuga ex nemo totam.
+
+## Ejemplo del componente finalizado
+
+{/* Componentes de React */}
+<Counter client:visible/>
+
+{/* Componentes de ASTRO */}
+<PostGridItem title="Prueba" img={frontmatter.img} tags={frontmatter.tags}/>

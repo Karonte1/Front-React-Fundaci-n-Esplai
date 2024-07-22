@@ -1,0 +1,21 @@
+
+
+.caja-float {
+  border: 2px solid red;
+}
+
+.caja-float img {
+  float: left;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.caja-float::after {
+  content: '';
+  display: block;
+  clear:both;
+}
+
+/* .clear {
+  clear: both;
+} */

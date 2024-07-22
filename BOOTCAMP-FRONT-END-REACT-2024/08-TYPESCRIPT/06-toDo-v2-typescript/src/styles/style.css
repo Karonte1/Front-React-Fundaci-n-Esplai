@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/fonts/Josefin_Sans/JosefinSans-Variable.woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/fonts/Josefin_Sans/JosefinSans-Italic-Variable.woff2');
+  font-style: italic;
+}
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* .alertIn {
+  animation: alertIn 0.5s ease-out forwards;
+}
+
+@keyframes alertIn {
+  from {
+    translate: 100%;
+  }
+  to {
+    translate: 0%;
+  }
+} */
+
+/* 
+
+svg {
+  display: none;
+}
+
+input[type="checkbox"]:checked + svg {
+  display: block;
+} */

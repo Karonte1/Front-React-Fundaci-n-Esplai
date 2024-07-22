@@ -1,0 +1,58 @@
+body {
+  margin-bottom: 4rem;
+}
+
+.text-red {
+  color: crimson;
+}
+
+button {
+  background-color: royalblue;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  border: none;
+  font-size: 1.2rem;  
+}
+
+button:active {
+  background-color: gold;
+}
+
+
+
+input {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+}
+
+p.scroll {
+  border: 2px solid black;
+  padding: 1rem;
+  height: 200px;
+  width: 250px;
+  overflow-y: auto; 
+}
+
+button.transicion:hover {
+  background-color: crimson;
+  transition: background-color 1s ease;
+}
+
+
+div.animacion {
+  background-color: indigo;
+  width: 100px;
+  height: 100px;
+  margin-block: 2rem;
+}
+
+.out {
+  animation: moveRight 0.3s forwards;  
+}
+
+
+@keyframes moveRight {
+  to {
+    translate: 1000px;
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <title>Event Delegation</title>
+</head>
+<body>
+  <h1>Event Delegation</h1>
+
+  <section class="movies-section">
+    <h2>Películas</h2>
+
+    <article class="movie">
+      <span class="title">Harry Potter</span>
+      <button name="edit" class="edit">✏</button>
+      <button class="delete" data-id="1">🗑</button>
+    </article>
+
+    <article class="movie">
+      <span class="title">Memento</span>
+      <button name="edit" class="edit">✏</button>
+      <button class="delete" data-id="2">🗑</button>
+    </article>
+
+    <article class="movie">
+      <span class="title">Robocop</span>
+      <button name="edit" class="edit">✏</button>
+      <button class="delete" data-id="3">🗑</button>
+    </article>
+
+    <article class="movie">
+      <span class="title">Amelie</span>
+      <button name="edit" class="edit">✏</button>
+      <button class="delete" data-id="4">🗑</button>
+    </article>    
+
+  </section>
+
+  
+  <script src="./main.js"></script>
+</body>
+</html>

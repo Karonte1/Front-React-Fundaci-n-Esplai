@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <title>Eventos del DOM</title>
+</head>
+<body>
+  <h1>Eventos del DOM</h1>
+
+
+  <img class="foto-1" src="https://picsum.photos/id/10/200/100" alt="Paisaje boscoso">
+
+  <hr>
+
+  <h2>Para mouse</h2>
+  <button class="btn-1">click</button>
+  <button class="btn-2">dblclick</button>
+  <button class="btn-3">mouseenter</button>
+  <button class="btn-4">mouseleave</button>
+  <button class="btn-5">mouseover</button>
+
+  <br>
+  <br>
+
+  <h2>Para teclado</h2>
+  <h3>Change y keypress</h3>
+  <input type="text" placeholder="change">
+  <input type="text" placeholder="keypress">
+
+  <hr>
+
+  <h2>Para formularios</h2>
+  <h2>change e input</h2>
+  <input type="range" min="1" max="10" step="1"><span>5</span>
+
+  <p class="scroll">
+    <strong>Párrafo con scroll</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ea illum nulla repudiandae reprehenderit adipisci beatae dolores distinctio temporibus quos quia non dolorem deserunt minima reiciendis fugit, cumque a fuga! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam accusamus assumenda officiis vel! Consequuntur magnam perferendis reiciendis illum eligendi, rerum ex. Quia dignissimos mollitia ipsum cumque labore totam, minima qui.
+  </p>
+
+  <h2>Para animaciones o transiciones</h2>
+
+  <button class="transicion">Transicion</button>
+
+  <div class="animacion"></div>
+
+  <button class="delete-box">Eliminar caja</button>
+
+
+  <hr>
+
+  <h2>Otras maneras de añadir eventos a un elemento</h2>
+
+  <h3>Usando las propiedades on.....</h3>
+  <img class="foto-2" src="https://picsum.photos/id/14/200/150" alt="">
+
+  <h3>Añadiendo directamente el evento en el HTML</h3>
+  <img onclick="handleFotoClick()" src="https://picsum.photos/id/20/200/200" alt="">
+
+  <hr>
+
+  <h2>Limpiar un listener (eliminarlo)</h2>
+
+  <img class="foto-3" src="https://picsum.photos/id/15/200/150" alt="">
+  <img class="foto-4" src="https://picsum.photos/id/16/200/150" alt="">
+  <button class="remove-event">Quitar evento de las imagenes</button>
+  
+  <script src="./main.js"></script>
+</body>
+</html>

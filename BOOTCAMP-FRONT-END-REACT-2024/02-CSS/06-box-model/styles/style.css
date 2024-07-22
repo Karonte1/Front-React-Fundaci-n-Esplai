@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+  /* outline: 2px solid rgb(255 0 0 /0.5); */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+details {
+  margin-bottom: 25px;
+}
+
+.container {
+  /* border: 2px solid black; */
+  width: 90%;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+
+/** Caja content --> width y height  */
+
+.caja-block {
+  background-color: pink;
+
+  width: 100%; /* por defecto */
+  height: auto; /* por defecto */
+
+  width: 100px;
+  height: 100px;
+}
+
+.caja-inline {
+  background-color: gold;
+  width: 2000px;
+  height: 1000px;
+
+  /*! width NO SE PUEDE PONER */
+  /*! height NO SE PUEDE PONER */
+}
+
+.rojo {
+  background-color: tomato;
+}
+
+
+/** max-content y min-content  */
+
+.max-content {
+  background-color: pink;
+  width: max-content;
+}
+
+.min-content {
+  background-color: pink;
+  width: min-content;
+}
+
+
+
+/** display */
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+
+/** max-width, min-width, max-height, min-height  */
+
+.caja {
+  background-color: indigo;
+  
+  width: 80%;
+  max-width: 800px;
+  min-width: 500px;
+
+  height: 100px;
+}
+
+.padre {
+  background-color: hotpink;
+  height: 100px;  
+  width: 80%;
+}
+
+.hijo {
+  background-color: gold;
+  height: 30px;
+  width: 50%;
+}
+
+.card {
+  background-color: lightgray;
+  text-align: center;
+  min-height: 130px;
+}
+
+/** padding  */
+
+.padding-1 {
+  background-color: coral;
+
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+
+  /* shorthand */
+
+  /*        👆   👉  👇  👈       */
+  padding: 10px 20px 15px 0; 
+
+  /*        👆👇   👈👉      */
+  padding:  10px   20px; 
+
+  /*        👆   👈👉    👇   */
+  padding:  10px  20px   0px; 
+
+  /*        👆👈👉👇   */
+  padding:    20px; 
+
+
+  /** Eje Y  */
+  padding-block: 0px;
+
+  /** Eje X  */
+  padding-inline: 5px;
+
+
+}
+
+.padding-span {
+  background-color: hotpink;
+
+  padding-left: 10px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/** border  */
+
+.border-1 {
+  border-style: solid;
+  border-style: dotted;
+  border-style: double;
+  border-style: dashed;
+
+  border-width: 10px;
+
+  border-color: crimson;
+
+  /* shorthand */
+
+  border: 2px solid black;
+  border: 4px dotted gold;
+}
+
+.border-span {
+  background-color: pink;
+
+  border: 3px solid indigo;
+}
+
+/** border-radius  */
+
+.radius-1 {
+  background-color: royalblue;
+  padding: 10px;
+  margin-block: 10px;
+  
+  border-radius: 5px 10px 0px 20px;  
+  border-radius: 10px;
+  border-radius: 10000px;
+}
+
+.img-radius {
+  border-radius: 50%;
+}
+
+
+
+
+/** margin  */
+
+.margin-1 {
+  background-color: coral;
+
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+
+
+  /* shorthand */
+
+  /*        👆   👉  👇  👈       */
+  margin:  10px 20px 15px 0; 
+
+  /*        👆👇   👈👉      */
+  margin:   10px   20px; 
+
+  /*        👆   👈👉    👇   */
+  margin:  10px  20px   0px; 
+
+  /*        👆👈👉👇   */
+  margin:     20px; 
+
+
+  /** Eje Y  */
+  margin-block: 20px;
+
+  /** Eje X  */
+  margin-inline: 0px;
+}
+
+.margin-2 {
+  background-color: gold;
+  margin-top: 10px;
+}
+
+.margin-span {
+  background-color: hotpink;
+
+  margin-inline: 20px;
+  margin-block: 20px; /*! NO SE PUEDE PONER, ES DECIR, NO AFECTA */
+}
+
+.section-margin {
+  background-color: lightblue;
+  /* padding-top: 5px; */
+  /* border: 1px solid black; */
+  /* padding-top: 20px; */
+}
+
+.article-margin {
+  /* border: 1px solid black; */
+}
+
+.parrafo-margin {
+  margin-top: 60px;
+}
+
+/** outline  */
+
+.outline-1 {
+  background-color: hotpink;
+  padding: 10px;
+  margin-top: 10px;
+
+  border: 2px solid gold;
+
+  outline: 10px solid indigo;
+
+  outline-offset: 0px;
+}
+
+/** box-shadow   */
+
+.shadow-1 {
+  background-color: lightseagreen;
+  padding: 10px;
+
+  /*           X   Y  blur  extension     color      */
+  box-shadow: 7px 7px  13px      -5px    gray;
+
+  /*  Si le pones la palabra inset la sombra va hacia dentro */
+  box-shadow: 6px 6px  15px      0px    gray inset;
+
+  /* podemos poner tantas sombras como queramos separadas por comas  */
+
+  box-shadow: 3px 3px 0px 0px crimson, -3px -3px 0 0 gold;
+}
+
+
+/** box-sizing  */
+
+.sizing {
+  background-color: gold;
+  padding: 10px;
+  border: 5px solid black;
+  margin-block: 10px;
+  width: 150px;
+}
+
+.sizing-1 {
+  box-sizing: content-box; /* por defecto */ 
+}
+
+.sizing-2 {
+  box-sizing: border-box;
+}
+
+/** overflow */
+
+
+.overflow {
+  background-color: lightskyblue;
+  padding: 10px;
+  margin-block: 10px;
+  color: black;
+
+  height: 95px;
+}
+
+
+.overflow-1 {
+  /* overflow: visible;  *//* por defecto */
+  /* overflow: scroll; */
+
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.overflow-2 {
+  overflow: auto;
+}
+
+.overflow-3 {
+  overflow: hidden;
+}
+
+/** TRUQUITO 👉 Centrar una caja block dentro de otra en horizontal  */
+
+.centrar-caja {
+  border: 2px solid crimson;
+  padding: 10px;
+  width: 60%;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  margin-inline: auto;
+}
+
+.centrar-span {
+  /* border: 2px solid crimson; */
+
+  margin-inline: auto; /*! ESTO NO VA!!*/
+
+  text-align: center; /*! ESTO NO VA!!*/
+} 
+
+.centrar-span-div {
+  /* border: 2px solid royalblue; */
+  text-align: center;
+}
+
+/*! PROBLEMAS  */
+
+/** problemas con las imágenes  */
+
+.problema-imagenes {
+  background-color: hotpink;
+  /* line-height: 0; */
+}
+
+.img {
+  display: block;
+}
+
+/** problema con border radius  */
+
+.problema-radius {
+  /* border: 3px solid black; */
+  margin: 20px;
+  text-align: center;
+  background-color: lightgray;
+  padding-bottom: 10px;
+
+  width: 35%;
+
+  border-radius: 10px;
+  overflow: hidden;
+}

@@ -1,0 +1,34 @@
+.movies-section {
+  border: 2px solid crimson;
+}
+
+.movie {
+  border: 2px solid black;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.7rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.movie .title {
+  margin-right: auto;
+}
+
+button {
+  margin: 0;
+}
+
+
+.delete-animation {
+  animation: moveLeft 0.5s ease-out;
+}
+
+@keyframes moveLeft {
+  to {
+    translate: -1000px;
+  }
+}

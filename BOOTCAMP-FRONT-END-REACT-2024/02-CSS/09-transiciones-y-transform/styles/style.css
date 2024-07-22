@@ -1,0 +1,87 @@
+summary h2 {
+  display: inline;
+}
+details {
+  margin-block: 2rem;
+}
+
+
+.btn {
+  background-color: transparent;
+  color: indigo;
+  border: 0.1rem solid indigo;
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.7rem;
+
+  transition-property: color;
+  transition-duration: 2s;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+
+  /* shorthand */
+
+  transition: color 2s ease;
+  transition: background-color 2s ease;
+  transition: all 2s ease;
+
+  transition: color 2s ease, background-color 2s ease;
+}
+
+.btn:hover {
+  background-color: indigo;
+  color: white;
+}
+
+/** transformaciones  */
+
+.caja {
+  width: 100px;
+  aspect-ratio: 1;
+  background-color: gold;
+  border: 2px solid black;
+
+  transition: transform 1s ease,  translate 1s ease, rotate 1s ease;
+}
+
+
+input[type="checkbox"]:checked + .caja-translate {
+  /* transform: translate(50px, 50px); */
+
+  translate: 50px 50px;
+  translate: 200px;
+  translate: -50%; /*! en tun translate, el tanto por ciento es DE SÍ MISMO*/
+}
+
+
+
+input[type="checkbox"]:checked + .caja-rotate {
+  /* transform: rotate(45deg);
+  transform:  perspective(250px)  rotateX(180deg);
+  transform:  perspective(250px)  rotatey(75deg); */
+
+  rotate: 45deg;
+}
+
+input[type="checkbox"]:checked + .caja-scale {
+  transform: scale(1.1);
+}
+
+/** filters  */
+
+img.blur {
+  filter: blur(2px);
+  transition: filter 1s;
+}
+
+img.blur:hover {
+  filter: none;
+}
+
+img.saturate {
+  filter: saturate(0);
+  transition: filter 1s ease;
+}
+
+img.saturate:hover {
+  filter: saturate(1.5);
+}

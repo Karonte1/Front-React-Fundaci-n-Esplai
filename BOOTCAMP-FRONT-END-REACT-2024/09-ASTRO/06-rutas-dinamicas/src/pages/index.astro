@@ -1,0 +1,40 @@
+---
+// JavaScript
+import Counter from "../components/Counter"
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+
+<!-- HTML -->
+<MainLayout title="Home page" >
+	<!-- <h2 slot="before">Antes</h2> -->
+	<!-- <h2 slot="after">Después</h2> -->
+	<h2 class="text-3xl font-bold">Home</h2>
+
+  <!--* Con client:idle se cargara el javascript de inmediato  -->
+  <!-- <Counter client:idle/> -->
+  
+  
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium odit cumque dolore nisi itaque minus molestias numquam quae libero, exercitationem quo inventore enim eius iure deleniti commodi ut necessitatibus perferendis?</p>
+  
+  
+  
+  <h2>Lorem ipsum dolor sit amet.</h2>
+  
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, nam voluptates! Eius nulla aliquam, debitis cupiditate cumque reprehenderit recusandae, laboriosam quo qui quod excepturi perferendis dolor pariatur illum eaque voluptate atque iste? Nisi ad libero incidunt dicta perspiciatis iusto accusamus sequi, mollitia corporis quis, neque vitae sapiente cupiditate beatae magni delectus fuga ex nemo totam. Dolorem, nihil voluptas. Nisi incidunt fugit ab alias voluptas laborum rerum labore accusamus aut. Accusamus reiciendis voluptas similique in, adipisci officia natus distinctio, modi aliquam ipsa id error corrupti eligendi iure voluptate aspernatur, nihil aut! Ipsa, ratione recusandae optio repudiandae velit harum illo maiores commodi molestias at magnam dolor saepe veniam vero soluta placeat enim totam expedita excepturi delectus atque quibusdam! Totam nobis pariatur ut sed? Tempore tempora, qui dolorum, voluptates quas necessitatibus aut assumenda esse distinctio sint eaque eveniet ipsam rerum totam ipsum beatae possimus. At, enim laudantium nisi, commodi aliquam quidem aspernatur voluptate impedit maxime, delectus odit? Animi consequatur, fugiat est laboriosam perspiciatis error laudantium repellat fugit fuga totam voluptates nostrum distinctio ipsa aperiam reiciendis asperiores autem. Nobis, quisquam labore? Nobis est accusantium quisquam cumque illum. Quam aperiam nisi, voluptatem cupiditate doloremque mollitia voluptas, quaerat neque officiis dignissimos repellendus aspernatur quibusdam esse eum?</p>
+  
+  
+  <!--* Con client:visible se cargara el javascript solo cuando el componente vaya a aparecer en pantalla  -->
+  <Counter client:visible/>
+  
+</MainLayout>
+
+
+
+<!-- CSS -->
+
+<style>
+  body {
+    background: pink;
+  }
+</style>

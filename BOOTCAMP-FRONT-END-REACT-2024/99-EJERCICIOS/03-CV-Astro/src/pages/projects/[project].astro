@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content'
+import Title from '../../components/Title.astro'
+import MainLayout from '../../layout/MainLayout.astro'
+import { Image } from 'astro:assets'
+
+
+
+export async function getStaticPaths () {
+
+  const projects = await getCollection('projects');
+  
+
+  return projects.map(project =>({ params: { project: project.slug }, props: { project }}));
+}
+
+const { project } = Astro.props;
+
+//* Para que Astro compile todo el Markdown a HTML tienes que usar el método Render()
+const { Content } = await project.render();
+
+---
+
+<MainLayout miTitulo={`Proyecto:${project.data.title}`}>
+  
+  <div class="w-3/4 max-w-5xl mx-auto">
+
+    <div class="aspect-[6/3] mt-24">
+      <Image class="w-full h-full object-cover" src={project.data.img.src} alt={project.data.img.alt} width={403} height={505} transition:name={project.data.img.src}/>
+    </div>
+  
+    <Title>{project.data.title}</Title>
+  
+    <div class="prose">
+      <Content />
+    </div>
+  </div>
+
+
+</MainLayout>

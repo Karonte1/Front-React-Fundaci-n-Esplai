@@ -1,0 +1,75 @@
+/* Comentarios en CSS son de bloque */
+
+/*? Sintaxis  */
+
+/* 
+Cada REGLA CSS se compone de:
+  selector -> lo que va antes de las llaves
+  llaves -> envuelven todos los estilos
+  parejas de propiedad: valor;
+  punto y coma -> obligatorio!!
+*/
+h3 {
+  color: green;
+}
+
+/*? Maneras de "llamar" a nuestras etiquetas html para darle estilos --> selectores  */
+
+/** Por su etiqueta  */
+
+p {
+  color: indigo;
+}
+
+/** Por su class --> .  */
+
+.caja {
+  background-color: pink;
+}
+
+/** Por su ID --> #  */
+
+#supercaja {
+  border: 2px solid black;
+}
+
+/** Por su atributo --> []  */
+
+[name] {
+  border: 2px solid royalblue;
+}
+
+[type='email'] {
+  box-shadow: 3px 3px 0px 0px gold;
+}
+
+[data-city='madrid'] {
+  background-color: lightcoral;
+}
+
+/* que el atributo empiece por... */
+[data-city^='ba'] {
+  border: 2px solid royalblue;
+}
+
+/* que el atributo termine por... */
+[data-city$='d'] {
+  box-shadow: 2px 2px 0 0 hotpink;
+}
+
+/* que el atributo tenga en algún lugar... */
+[data-city*='d'] {
+  box-shadow: 2px 2px 0 0 crimson;
+}
+
+/** Comodín que vale por todas las etiquetas --> *   */
+
+* {
+  /* border: 2px solid black; */
+}
+
+/** Podemos añadir especificidad concatenando selectores  */
+
+p.caja {
+  color: blue;
+}

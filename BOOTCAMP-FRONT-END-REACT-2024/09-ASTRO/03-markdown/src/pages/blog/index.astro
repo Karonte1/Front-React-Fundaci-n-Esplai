@@ -1,0 +1,32 @@
+---
+import PostsMenu from "../../components/PostsMenu.astro"
+import MainLayout from "../../layouts/MainLayout.astro";
+import PostGridItem from "../../components/PostGridItem.astro";
+
+const posts = await Astro.glob('./*.md');
+
+---
+
+<MainLayout title="Página de Contacto">
+	<h1 class="text-3xl font-bold my-8">Blog</h1>
+
+	<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+		{
+			posts.map(post => {
+				const postInfo = {
+					title: post.frontmatter.title,
+					description: post.frontmatter.description,
+					img: {
+						src: post.frontmatter.img.src,
+						alt: post.frontmatter.img.alt
+					},
+					tags: post.frontmatter.tags
+				}
+				return <PostGridItem post={postInfo} url={post.url} />
+		})
+		}
+		
+	</section>
+
+</MainLayout>

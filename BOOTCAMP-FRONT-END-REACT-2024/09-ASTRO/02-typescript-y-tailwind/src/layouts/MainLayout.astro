@@ -1,0 +1,60 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+type Props = {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+
+
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<!-- <slot name="before" /> -->
+		
+		<Header></Header>
+
+		<main class="mx-auto w-3/4 max-w-5xl my-8">
+			<slot />
+		</main>
+
+		<script>
+			type Fruta = string;
+			const frutas: Fruta[] = ['🍎']
+		</script>
+		
+		<!-- <slot name="after" /> -->
+    <Footer></Footer>
+	</body>
+</html>
+
+
+<style is:global>
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+
+	a {
+		text-decoration: none;
+	}
+</style>

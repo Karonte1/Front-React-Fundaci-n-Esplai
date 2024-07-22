@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <title>Formularios en JavaScript</title>
+</head>
+<body>
+  <h1>Formularios en JavaScript</h1>
+
+  <form class="main-form">
+    <label>Nombre:
+      <input type="text" placeholder="Nombre..." name="name">
+    </label>
+
+    <label>Edad:
+      <input type="number" placeholder="Edad..." name="age">
+    </label>
+
+    <label>Fecha:
+      <input type="date" name="birthday">
+    </label>
+
+    <label>Color:
+      <input type="color" name="color">
+    </label>
+
+    <label class="note">Nota:
+      <input type="range" min="1" max="10" step="1" value="5" name="note"><span class="range-output">5</span>
+    </label>
+
+    <label>Ciudad:
+      <select name="city">
+        <option value="">Selecciona una ciudad...</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Sevilla">Sevilla</option>
+        <option value="A Coruña">A Coruña</option>
+      </select>
+    </label>
+
+    <label class="comarca">Comarca:
+      <input type="text" name="provincia">
+    </label>
+
+
+
+    <h2>Género:</h2>
+    <label>
+      <input type="radio" name="gender" value="female">
+      Femenino
+    </label>
+    <label>
+      <input type="radio" name="gender" value="male">
+      Masculino
+    </label>
+
+    <label>
+      <input type="checkbox" name="accept">
+      ¿Aceptas las condiciones?
+    </label>
+
+  
+
+
+
+
+
+    <button type="submit">Enviar formulario</button>
+
+  </form>
+  
+  <script src="./main.js"></script>
+</body>
+</html>

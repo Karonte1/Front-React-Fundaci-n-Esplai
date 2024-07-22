@@ -1,0 +1,54 @@
+.color-nombre {
+  /* https://www.w3schools.com/cssref/css_colors.php */
+  color: indianred;
+}
+
+.color-rgb {
+  /* cada valor del color acepta 1 byte, es decir 8 bits = 256 valores  */
+
+  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  color: rgb(255, 0, 0);
+  color: rgb(255, 255, 0);
+  color: rgb(255, 0, 255);
+
+  /* también se puede usar sin comas */
+  color: rgb(255 100 200);
+}
+
+.color-rgb-trans {
+  color: rgba(255, 0, 0, 0.5);
+  /* No necesitamos poner la a en rgba */
+  color: rgb(0, 0, 255, 0.5);
+
+  /* Si quieres quitar las comas, necesitas usar una barra */
+  color: rgb(0 0 255 / 0.5);
+}
+
+/* con 2 cifras hexadecimales llegamos a los mismos 256 valores  */
+.color-hex {
+  color: #ff00ff;
+  /* Si las 6 son iguales puedes usar 3 cifras */
+  color: #aaa;
+}
+
+.color-hex-trans {
+  color: #ff00ff70;
+}
+
+.color-hsl {
+  /* hsl =  hue    saturation  luminosity */
+  color: hsl(0, 100%, 50%);
+  color: hsl(0, 100%, 30%);
+  color: hsl(0, 100%, 70%);
+
+  /* puedes ponerlo sin comas */
+  color: hsl(270 100% 75%);
+}
+
+.color-hsl-trans {
+  color: hsl(0, 100%, 70%, 0.4);
+
+  /* Si quieres quitarle comas usa la barra */
+  color: hsl(200 100% 70% / 0.7);
+}

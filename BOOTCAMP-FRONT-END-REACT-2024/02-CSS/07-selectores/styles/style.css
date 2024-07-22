@@ -1,0 +1,311 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  /* width: 90%;
+  max-width: 800px; */
+
+  width: min(90%, 800px);
+  margin: 30px auto;
+}
+
+
+.inline {
+  display: inline;
+}
+
+
+/** Selecto de hermanos adyacentes -->  +  */
+
+h3 + p {
+  color: hotpink;
+}
+
+/** Selecto de hermanos genéricos -->  ~  */
+
+h3 ~ p {
+  text-decoration: underline;
+}
+
+/** Selecto de hijos directos -->  >  */
+
+ul > li {
+  border: 2px solid black;
+}
+
+
+/** Selecto de descendientes --> (espacio)  */
+
+ul li {
+  outline: 2px solid hotpink;
+}
+
+/* Podemos mezclar como queramos */
+
+ul > li.especial {
+  box-shadow: 2px 2px 3px 3px indigo;
+}
+
+
+/** Pseudoclases  */
+
+.btn {
+  background-color: hsl(177, 70%, 41%);
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: none;
+  font-size: 20px;
+}
+
+.btn-hover:hover {
+  background-color: royalblue;
+  color: white;
+}
+
+.btn-active:active {
+  background-color: crimson;
+}
+
+.btn-focus:focus {
+  outline: 2px solid crimson;
+}
+
+input:focus {
+  outline: 3px solid lightseagreen;
+}
+
+
+.btn-focus-visible:active {
+  background-color: hsl(177, 70%, 30%);
+}
+.btn-focus-visible:focus-visible {
+  outline: 4px solid indigo;
+}
+
+
+a {
+  color: red;
+}
+
+a:active {
+  color: green;
+}
+
+a:visited {
+  color: blue;
+}
+
+
+/** Pseudoclases por posición  */
+
+table {
+  border-collapse: separate; /* por defecto */
+  border-collapse: collapse; 
+  margin-block: 20px;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+
+
+.tabla-1 tr:first-child {
+  background-color: lightseagreen;
+}
+
+.lista-1 > li:first-child {
+  background-color: pink;
+}
+
+
+.tabla-1 td:last-child {
+  background-color: #dfdfdf;
+}
+
+.lista-1 li:last-child {
+  background-color: lightcyan;
+}
+
+
+.caja-first-of-type p:first-of-type {
+  background-color: tomato;
+}
+
+
+/* :nth-child()  */
+
+.tabla-2 tr:nth-child(4) {
+  background-color: cyan;
+}
+
+.tabla-2 tr:nth-child(odd) { /* impares */
+  background-color: #dddddd;
+}
+
+.tabla-2 tr:nth-child(even) { /* pares */
+  text-decoration: underline;
+}
+
+.tabla-3 tr:nth-child(5n - 2) {
+  color: hotpink;
+}
+
+
+/* para negar a alguno */
+
+.lista-negacion li:not(:first-child) {
+  color: crimson;
+}
+
+.lista-negacion li:not(.este-no) {
+  text-decoration: underline indigo;
+}
+
+
+.menu {
+  text-align: center;
+}
+
+.menu a:not(:last-child) {
+  margin-right: 50px;
+}
+
+/** truquito pseudoclases  */
+
+div.caja-truquito {
+  background-color: hotpink;
+  height: 100px;
+  text-align: center;
+}
+
+
+div.caja-truquito:hover > p {
+  background-color: gold;
+}
+
+h2.titulo-truquito {
+  border: 2px solid crimson;
+}
+
+h2.titulo-truquito:hover + p {
+  background-color: royalblue;
+  color: white;
+}
+
+
+.checkbox-truquito {display: none;}
+
+input[type="checkbox"]:checked + label {
+  box-shadow:  0 0 2px 3px green;
+}
+
+
+/** has()  */
+
+.padre-has {
+  background-color: hotpink;
+  border: 2px solid black;
+  height: 100px;
+}
+
+.hijo-has {
+  background-color: gold;
+  height: 30px;
+  width: 50%;
+  border: 2px solid white;
+}
+
+.padre-has:has(.hijo-has:hover) {
+  background-color: indigo;
+}
+
+
+body:has(.dark) {
+  background-color: #303030;
+}
+
+/** pseudoelementos */
+
+
+p.selection::selection {
+  background-color: crimson;
+  color: gold;
+}
+
+/* si quieres estilizar la selección de toda la página ponlo sin nada */
+
+::selection {
+  background-color: indigo;
+  color: white;
+}
+
+
+.primera-linea::first-line {
+  color: crimson;
+}
+
+.primera-letra::first-letter {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+input.placeholder::placeholder {
+  color: red;
+}
+
+/* Estilizar marcadoreas de lista */
+
+ul.lista-marker li:first-child::marker {
+  color: red;
+  font-size: 20px;
+}
+
+ul.lista-marker li:last-child::marker {
+  content: url(https://picsum.photos/id/237/25);
+  content: '👩';
+}
+
+
+
+/** ::before y ::after  */
+
+.supertitulo span.antes {
+  display: inline-block;
+  background-color: indigo;
+  height: 3px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+.supertitulo span.despues {
+  display: inline-block;
+  background-color: indigo;
+  height: 3px;
+  width: 15px;
+  margin-left: 10px;
+}
+
+
+.supertitulo-cool::before {
+  content: '';
+  display:inline-block;
+  width: 15px;
+  height: 2px;
+  margin-right: 10px;
+  background-color: indigo;
+}
+
+.supertitulo-cool::after {
+  content: '';
+  display:inline-block;
+  width: 15px;
+  height: 2px;
+  margin-left: 10px;
+  background-color: indigo;
+}

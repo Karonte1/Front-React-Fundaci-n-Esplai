@@ -1,0 +1,10 @@
+---
+const files = await Astro.glob('../pages/blog/*.{md,mdx}');
+
+---
+
+<nav class="flex flex-col gap-4 my-8 border-2 p-4">
+  {
+    files.map(file => <a href={file.url}>{file.frontmatter.title}</a>)
+  }
+</nav>

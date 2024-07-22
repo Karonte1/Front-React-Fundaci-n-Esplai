@@ -1,0 +1,15 @@
+---
+interface Props {
+  invert?: boolean;
+}
+
+const { invert } = Astro.props;
+
+const classes = !invert
+  ? 'bg-blue-700 text-white hover:bg-transparent hover:text-blue-700'
+  : 'bg-transparent text-blue-700 hover:bg-blue-700 hover:text-white'
+---
+
+<button class={`transition-colors px-4 py-1 border-2 rounded-full text-lg border-blue-700 ${classes}`}>
+  <slot />
+</butt>

@@ -1,0 +1,110 @@
+.caja {
+  background-color: hotpink;
+  border: 2px solid black;
+}
+
+.caja-fija-01 {
+  height: 50px;
+  background-color: gold;
+
+  width: 200px;
+}
+
+/* Tantos por ciento */
+
+
+.padre-01 {
+  height: 100px;
+  width: 50%;
+}
+
+.hijo-01 {
+  height: 50px;
+  background-color: gold;
+  width: 50%;
+}
+
+/* porcentaje de pantalla  */
+
+.padre-02 {
+  height: 10vh;
+  width: 50vw;
+}
+
+.hijo-02 {
+  background-color: gold;
+  height: 50px;
+  width: 70vw;
+}
+
+/* html {
+  height: 100%;
+} */
+
+body {
+  background-color: pink;
+  background-image: linear-gradient(rgba(220, 20, 60, 0.148), rgba(65, 105, 225, 0.185));;
+  border: 2px solid black;
+
+  min-height: 100vh;
+}
+
+
+/** REM  */
+/** 1 rem es igual al font-size que tenga la etiqueta raíz (html)  */
+/*! por defecto siempre son 16px  */
+
+p.px {
+  font-size: 20px;
+}
+
+p.rem {
+  font-size: 1.25rem;
+}
+
+.btn-px {
+  background-color: transparent;
+  border: 2px solid indigo;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: indigo;
+  font-size: 20px;
+}
+
+.btn-rem {
+  background-color: transparent;
+  border: 0.1rem solid indigo;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.7rem;
+  color: indigo;
+  font-size: 1.25rem;
+}
+
+
+/** imágenes  */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.caja-imagen {
+  border: 3px solid lime;
+
+  /* width: 50vw;
+  height: 50vw; */
+  width: 30%;
+  /* aspect-ratio: 16/9;
+  aspect-ratio: 3/2; */
+  aspect-ratio: 2/3;
+  
+
+  /* background-image: url(https://picsum.photos/id/10/800/600);
+  background-size: cover; */
+}
+
+.caja-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position: center; */
+}

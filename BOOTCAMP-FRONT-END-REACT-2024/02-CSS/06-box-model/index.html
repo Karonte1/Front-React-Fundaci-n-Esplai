@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <title>Box model en CSS</title>
+</head>
+<body>
+  <main class="container">
+    <h1>Box model en CSS</h1>
+    <details>
+      <summary><h2 class="inline">Dos tipos de caja por defecto</h2></summary>
+    
+      <h3>Block</h3>
+    
+      <div class="caja-block">Soy un div de tipo "block"</div>
+      <div class="caja-block">Soy otro div de tipo "block"</div>
+    
+      <p><strong>Soy un párrafo "block"</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="rojo">Dignissimos</span> itaque reiciendis saepe molestiae vel nulla recusandae, tenetur libero dolore ipsum esse nesciunt nemo harum sunt porro aliquid blanditiis eaque excepturi.</p>
+    
+      <h3>Inline</h3>
+    
+      <span class="caja-inline">Soy un span de tipo "inline"</span>
+      <span class="caja-inline">Soy otro span de tipo "inline"</span>
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">width: min-content y max-content</h2>
+      </summary>
+      <h2 class="max-content">Titulo de prueba</h2>
+      <h2 class="min-content">Titulo de prueba</h2>
+    </details>
+    <hr>
+    <details>
+      <summary><h2 class="inline">display 👉 Para cambiar el comportamiento de una caja</h2></summary>
+    
+      <div class="inline">Soy un div</div>
+      <div class="inline">Soy otro div</div>
+    
+      <span class="block">Soy un span</span>
+      <span class="block">Soy otro span</span>
+    
+    </details>
+    <hr>
+    <details>
+      <summary><h2 class="inline">max-width, min-width, max-height, min-height</h2></summary>
+      <h3>max-width</h3>
+      <div class="caja"></div>
+      <br>
+      <div class="padre">
+        <div class="hijo"></div>
+      </div>
+      <h3>min-height</h3>
+      <div class="card">
+        <h2>Título</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error a eligendi ipsam tenetur assumenda explicabo ab est beatae harum deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quia omnis quo nulla atque. Eum beatae illo commodi magnam quas praesentium delectus est. Nulla iusto magni labore consectetur tenetur quae.</p>
+      </div>
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">Padding 👉 Espaciado DENTRO DE LA CAJA</h2>
+      </summary>
+    
+      <div class="padding-1">Caja con padding</div>
+      <h3>¿Qué pasa con el padding en cajas inline?</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt aspernatur recusandae excepturi <span class="padding-span">maiores</span> modi dolor, perferendis ad culpa exercitationem fugiat quae accusamus error suscipit inventore quasi natus ipsum nihil architecto.</p>
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">Border 👉 Borde de la caja</h2>
+      </summary>
+      <div class="border-1">Caja con border</div>
+      <h3>¿Qué pasa con el border en cajas inline?</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt aspernatur recusandae excepturi <span class="border-span">maiores</span> modi dolor, perferendis ad culpa exercitationem fugiat quae accusamus error suscipit inventore quasi natus ipsum nihil architecto.</p>
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">Border-radius 👉 redondeo de bordes</h2>
+      </summary>
+      <div class="radius-1">Caja con redondeo de bordes</div>
+      <img class="img-radius" src="https://picsum.photos/id/15/200/200" alt="">
+      <h3>Si la imagen no es cuadrada te quedará una elipse</h3>
+      <img class="img-radius" src="https://picsum.photos/id/15/200/100" alt="">
+    
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">Margin 👉 Espacio EXTERIOR entre una caja y otra</h2>
+      </summary>
+    
+      <div class="margin-1">Caja con margin</div>
+      <div class="margin-2">Otra caja con margin</div>
+      <h3>¿Qué pasa con el margin en cajas inline?</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt aspernatur recusandae excepturi <span class="margin-span">maiores</span> modi dolor, perferendis ad culpa exercitationem fugiat quae accusamus error suscipit inventore quasi natus ipsum nihil architecto.</p>
+      <h3>Problemas con el margin 👉 margin collapse</h3>
+      <section class="section-margin">
+        <article class="article-margin">
+          <p class="parrafo-margin"><strong>Párrafo dentro del article dentro del section</strong> ipsum, dolor sit amet consectetur adipisicing elit. Quam ipsum sed vel architecto reiciendis dolores perspiciatis voluptas consequatur delectus nemo vitae fugit at tenetur est, voluptate magnam obcaecati eligendi recusandae?</p>
+        </article>
+      </section>
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">Outline 👉 Otro borde pero solo estilístico</h2>
+      </summary>
+      <div class="outline-1">Soy un div con un outline</div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, magnam laborum veniam culpa, tempore mollitia, atque magni pariatur perferendis amet debitis illum! Officiis, vel recusandae. Odio in magni facilis quaerat.</p>
+    
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">Box shadow 👉 sombra de cajas</h2>
+      </summary>
+      <div class="shadow-1">Soy un div con un outline</div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, magnam laborum veniam culpa, tempore mollitia, atque magni pariatur perferendis amet debitis illum! Officiis, vel recusandae. Odio in magni facilis quaerat.</p>
+    
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">Box-sizing 👉 comportamiento del width y height en las cajas</h2>
+      </summary>
+      <div class="sizing sizing-1">Soy un div con un <strong>box-sizing: content-box</strong></div>
+      <div class="sizing sizing-2">Soy un div con un <strong>box-sizing: border-box</strong></div>
+    
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">Overflow 👉 Decidir qué hacer con el contenido que se salga de la caja</h2>
+      </summary>
+      <div class="overflow overflow-1">Soy un div con un <strong>overflow: scroll</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut sapiente corporis, debitis nisi perspiciatis asperiores rem commodi eius veritatis harum iste voluptatem error voluptatum exercitationem, molestias dignissimos? Ut, cupiditate doloremque?</div>
+      <div class="overflow overflow-2">Soy un div con un <strong>overflow: auto</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut sapiente corporis, debitis nisi perspiciatis asperiores rem commodi eius veritatis harum iste voluptatem error voluptatum exercitationem, molestias dignissimos? Ut, cupiditate doloremque?</div>
+      <div class="overflow overflow-3">Soy un div con un <strong>overflow: hidden</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut sapiente corporis, debitis nisi perspiciatis asperiores rem commodi eius veritatis harum iste voluptatem error voluptatum exercitationem, molestias dignissimos? Ut, cupiditate doloremque?</div>
+    
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">TRUQUITO 👉 Centrar una caja block dentro de otra en horizontal</h2>
+      </summary>
+      <div class="centrar-caja">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut sapiente corporis, debitis nisi perspiciatis asperiores rem commodi eius veritatis harum iste voluptatem error voluptatum exercitationem, molestias dignissimos? Ut, cupiditate doloremque?</div>
+      <span class="centrar-span">SOY UN SPAN NO INTENTES CENTRARME CON MARGIN</span>
+      <div class="centrar-span-div">
+        <span class="centrar-span">SOY UN SPAN DENTRO DE UN DIV</span>
+      </div>
+    
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">Imágenes 👉 Problemas con ellas</h2>
+      </summary>
+      <p>Normalmente a todas las imágenes les decimos max-width: 100% para que NUNCA SE PASEN DE SU PADRE y display:block; PARA QUITAR EL PROBLEMA DEL MALDITO ESPACIO DEBAJO</p>
+      <div class="problema-imagenes">
+        <img class="img" src="https://picsum.photos/id/15/2000/200" alt="">
+        <span>Soy un span</span>
+      </div>
+    
+    </details>
+    <hr>
+    <details>
+      <summary>
+        <h2 class="inline">Border-radius 👉 Problema en cajas con imágenes</h2>
+      </summary>
+      <div class="problema-radius">
+        <img class="img-problema-radius" src="https://picsum.photos/id/237/200/200" alt="">
+        <h3>Labrador</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, esse?</p>
+      </div>
+    
+    
+    </details>
+  </main>
+
+  
+</body>
+</html>

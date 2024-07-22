@@ -1,0 +1,34 @@
+---
+import { twMerge } from 'tailwind-merge';
+
+
+type Props = {
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  class?: string;
+  decoration?: 'square' | 'circle';
+}
+
+const { level, class: className, decoration } = Astro.props;
+
+const permitedTags = ["h1", "h2", "h3", "h4", "h5", "h6"];
+
+const Tag = level && permitedTags.includes(level) ? level : 'h1';
+
+const classes = {
+  h1: "text-3xl font-bold my-8",
+  h2: "text-2xl font-bold my-6",
+  h3: "text-xl font-bold my-4",
+  h4: "text-lg font-bold my-2",
+  h5: "text-base font-bold my-2",
+  h6: "text-sm font-bold my-2",
+}
+
+const finalClasses = className ? twMerge(classes[Tag], className) : classes[Tag];
+const circleClasses = decoration === 'circle' ? 'rounded-full' : '';
+
+---
+
+<Tag class={`font-montserrat ${finalClasses}`}>
+  { decoration && <span class={`inline-block size-4 bg-blue-700 mr-3 ${circleClasses}`}></span> }
+  <slot />
+</Tag>

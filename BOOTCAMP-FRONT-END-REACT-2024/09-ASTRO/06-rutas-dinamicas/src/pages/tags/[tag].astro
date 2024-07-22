@@ -1,0 +1,62 @@
+---
+import PostGridItem from '../../components/PostGridItem.astro'
+import MainLayout from '../../layouts/MainLayout.astro'
+
+type Tag = string;
+
+export async function getStaticPaths () {  
+  //* conseguir los archivos
+  const files: Record<string, any>[] = await Astro.glob('../blog/*.{md,mdx}');  
+  //* sacar los tags de cada uno en un array "aplanado"
+  const tags: Tag[] = files.map(file => file.frontmatter.tags).flat();
+  // ['ruta', 'coche', 'ruta', 'italia']
+  
+  //* versión más moderna juntando un map y un flat
+  // const tags = files.flatMap(file => file.frontmatter.tags);
+
+  //* Crear un array solo con los tags SIN REPETIR  
+  const uniqueTags: Tag[] = [...new Set(tags)];
+  // ['ruta', 'coche', 'italia']
+
+
+  //* Sintaxis de ASTRO, nos piden devolver un array con un objeto que tenga la propiedad params, y dentro una propiedad con el nombre del parámetro dinámico, en este caso tag, pero podría author o dog o lo que sea  [author].astro   [dog].astro   [tag].astro  
+  return uniqueTags.map(tag => (
+    { params: { tag: tag }, props: { posts: files } }
+  ))
+
+  // return [
+  //   { params: { tag: 'coche'} },
+  //   { params: { tag: 'ruta' }},
+  //   { params: { tag: 'croacia' }},
+  //   { params: { tag: 'italia' }},  
+  //   { params: { tag: 'carpatos' }},  
+  //   { params: { tag: 'francia' }},  
+  //   { params: { tag: 'paris' }},  
+  //   { params: { tag: 'avion' }},  
+  // ]
+}
+
+const { tag } = Astro.params;
+
+const { posts } = Astro.props;
+
+const filteredPosts = posts.filter(post => post.frontmatter.tags.includes(tag));
+
+---
+
+
+<MainLayout title={`Posts con la etiqueta: ${tag}`}>
+
+  <h2 class="text-2xl font-bold text-center">Lista de posts sobre: <span class="text-3xl underline">{tag}</span></h2>
+
+  <section class="grid grid-cols-1 md:grid-cols-2 my-8 gap-4">
+
+    {
+      filteredPosts.map(({frontmatter, url}) => <PostGridItem title={frontmatter.title} description={frontmatter.description} tags={frontmatter.tags} img={frontmatter.img} url={url}/>)
+    }
+
+  </section>
+
+
+
+</MainLayout>

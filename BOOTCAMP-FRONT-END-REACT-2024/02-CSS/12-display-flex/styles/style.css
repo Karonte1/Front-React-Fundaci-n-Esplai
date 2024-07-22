@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+summary > * {
+  display: inline-block;
+}
+
+
+.container {
+  width: min(90%, 800px);
+  margin-inline: auto;
+}
+
+.padre {
+  height: 250px;
+  border: 4px solid black;
+  background-color: hotpink;
+}
+
+.hijo {
+  background-color: gold;
+  border: 2px solid white;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* * flex básico */
+
+.padre-1 .hijo-2 {
+  font-size: 3rem;
+}
+
+.padre-1 {
+  display: flex;
+
+  /* organizar en el eje principal (horizontal de entrada)  */
+  justify-content: flex-start; /* por defecto */
+  justify-content: flex-end;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: center;
+
+  /* organizar hijos en el eje que cruza (vertical de entrada) */
+
+  align-items: stretch; /* por defecto */
+  align-items: flex-end; 
+  align-items: center; 
+  align-items: flex-start; 
+  align-items: baseline; /* los alinea con la línea base de sus textos */ 
+
+  gap: 1rem;
+
+}
+
+header.ejemplo-basico {
+  margin-top: 2rem;
+  background-color: lightseagreen;
+  padding: 0.5rem;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.ejemplo-basico img {
+  /* border: 2px solid lime; */
+}
+.ejemplo-basico nav {
+  /* border: 2px solid hotpink; */
+
+  display: flex;
+  gap: 1rem;
+}
+
+/** EN COLUMNA */
+
+.padre-2 {
+  display: flex;
+
+  flex-direction: row; /* por defecto */
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+
+/** EN VARIAS FILAS */
+
+.padre-3 {
+  height: auto;
+  display: flex;
+  align-items: center;
+
+  /* flex-direction: column; */
+
+  flex-wrap: nowrap; /* por defecto */
+  /* flex-wrap: wrap-reverse; */
+  flex-wrap: wrap;
+  /*! Ojo porque cuando hacemos wrap, si el padre tiene espacio de altura suficiente, las filas se repartirán la altura, con lo que a lo mejor no tienes a los hijos tocándose una fila con otra */
+
+  /* Para organizar cómo se colocan estas filas */
+
+  align-content: flex-end;
+  align-content: flex-start;
+  align-content: center;  
+  align-content: stretch;
+}
+
+.padre-3 .hijo {
+  width: 100px;
+}
+
+/* flex-grow */
+
+.padre-4 {
+  display: flex;  
+}
+
+.padre-4 .hijo {
+  width: 50px;
+}
+
+.padre-4 .hijo-2 {
+  flex-grow: 0; /* por defecto no te permito crecer */
+  flex-grow: 1;
+}
+
+/* 200px de espacio sobrante, divididos en 6 espacios (1 + 5) */
+/* el hijo 2 se lleva 1/6 de 200px extra */
+/* el hijo 4 se lleva 5/6 de 200px extra */
+.padre-4 .hijo-4 {
+  flex-grow: 5;
+}
+
+
+/** flex-shrink  */
+.padre-5 {
+  display: flex;
+}
+
+.padre-5 .hijo {
+  width: 100px;
+}
+
+.padre-5 .hijo-2 {
+  flex-shrink: 1; /* por defecto se comprimen */
+  flex-shrink: 0;
+}
+
+.padre-5 .hijo-4 {
+  flex-shrink: 2;
+}
+
+
+.padre-5 .hijo-3 {
+  flex-shrink: 1;
+}
+
+
+/** flex-basis  */
+
+.padre-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+/* equivale al width cuando estamos en "row" y al height cuando estamos en "column" */
+.padre-6 .hijo {
+  flex-basis: 100px;
+  /* width: 100px; */
+}
+
+
+
+/** order  */
+
+.padre-7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*! Todos los hijos siempre están en ORDER = 0  */
+/** los hijos se van a ordenar de menor order a mayor order  */
+
+.padre-7 .hijo-1 {
+  order: 3;
+}
+.padre-7 .hijo-2 {
+  order: 1;
+}
+.padre-7 .hijo-3 {
+  order: 4;
+}
+.padre-7 .hijo-4 {
+  order: 2;
+}
+
+
+/** align-self  */
+
+.padre-8 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.padre-8 .hijo-3 {
+  align-self: flex-end;
+}
+
+
+/** truquito  */
+
+.padre-9 {
+  display: flex;
+  align-items: center;
+}
+
+.padre-9 .hijo-2 {
+  margin-left: auto;
+  margin-right: auto;
+}

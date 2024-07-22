@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/output.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Mi primera web con Tailwind CSS</title>
+</head>
+<body>
+
+  <div class="container mx-auto px-4 my-12">
+    
+    <h1 class="text-blue-500 underline font-bold text-center">Mi primera web con Tailwind CSS</h1>
+    
+    <h2 class="text-xl font-bold my-4">Estilos normales</h2>
+
+    <button class="bg-emerald-400 text-blue-700 border-4 border-red-400 px-4 py-2 rounded-full">Haz click</button>
+    
+    <h2 class="text-xl font-bold my-4">Pseudoclases</h2>
+    
+    <button class="bg-emerald-400 text-blue-700 border-4 border-red-400 px-4 py-2 rounded-full hover:bg-emerald-500 active:bg-emerald-300">Haz click</button>
+    
+    <input type="text" class="border rounded-full px-4 py-2 focus:outline-2 focus:outline-red-200" placeholder="Nombre...">
+    
+    <h2 class="text-xl font-bold my-4">Responsive</h2>
+    
+    <div class="border-2 border-blue-500 sm:border-red-500 md:border-green-500 lg:border-purple-500 xl:border-pink-500 2xl:border-indigo-700 p-3">
+      Caja
+    </div>
+    
+    <h2 class="text-xl font-bold my-4">Valores arbitrarios</h2>
+    
+    <div class="bg-indigo-200 p-2 w-[123px] my-8">Caja que quiero que mida 123px</div>
+    
+    <div class="border-2 w-1/3 border-black aspect-[9/16]">
+      <img class="size-full object-cover" src="https://picsum.photos/id/23/200/100" alt="Foto de unos tenedores">
+    </div>
+    
+    <h2 class="text-xl font-bold my-4">Extender cualquier clase</h2>
+    
+    <p class="bg-primary">Párrafo con el color primary</p>
+    
+    <h3 class="text-2xl font-bold underline decoration-secondary">Título subrayado de secondary</h3>
+    
+    <div class="bg-darkBlue w-24 aspect-story"></div>
+    
+    
+    <h2 class="text-xl font-bold my-4">Clases a hijos</h2>
+
+
+    <ul class="*:border-2 *:border-red-200">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+    </ul>
+    
+
+
+  </div>
+</body>
+</html>

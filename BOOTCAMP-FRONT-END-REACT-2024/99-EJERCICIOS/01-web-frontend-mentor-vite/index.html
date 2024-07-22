@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/style.css">
+
+    <title>News Homepage</title>
+  </head>
+  <body class="font-inter">
+
+    <!-- <div class="container mx-auto px-4"> -->
+    <div class="container mb-24">
+ 
+      <header class="py-6 flex justify-between">
+        <img src="/img/logo.svg" alt="Logo de una W">
+        
+        <input class="toggle peer/toggle hidden" type="checkbox" id="toggle">
+        <label class="relative z-50 md:hidden" for="toggle">
+          <img class="toggle-icon" src="/img/icon-menu.svg" alt="Icono de burger para mobile">    
+          <img class="close-icon hidden" src="/img/icon-menu-close.svg" alt="Icono de una x para cerrar el menú">
+        </label>
+
+        <nav class="hidden md:flex items-center gap-10 *:text-pice-gray [&_>_a:hover]:text-pice-orange">
+          <a href="#">Home</a>
+          <a href="#">New</a>
+          <a href="#">Popular</a>
+          <a href="#">Trending</a>
+          <a href="#">Categories</a>
+        </nav>
+
+        <div class="sidebar grid translate-x-full peer-checked/toggle:translate-x-0 fixed right-0 top-0 h-screen w-60 bg-pice-white  place-items-center transition-transform duration-700">
+          <!-- <button class="absolute top-10 right-10">
+            <img src="/img/icon-menu-close.svg" alt="Icono de una x para cerrar el menú">
+          </button> -->
+          <nav class="flex flex-col gap-4 *:text-pice-black *:text-xl [&_>_a:hover]:text-pice-orange">
+            <a href="#">Home</a>
+            <a href="#">New</a>
+            <a href="#">Popular</a>
+            <a href="#">Trending</a>
+            <a href="#">Categories</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="test grid gap-12 lg:grid-cols-[2fr_1fr]">
+
+        <section>
+          <picture>
+            <source srcset="/img/image-web-3-desktop.jpg" media="(min-width: 768px)">
+            <img src="/img/image-web-3-mobile.jpg" alt="Foto aparejos de colores">
+          </picture>
+
+
+          <div class="flex flex-col lg:flex-row gap-3 mt-4">
+            <h1 class="text-4xl font-extrabold lg:w-1/2">The Dark Future of Web 3.0?</h1>
+            <div class="lg:w-1/2">
+              <p class="text-pice-gray leading-7">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+              <button class="bg-pice-red hover:bg-pice-black text-pice-black hover:text-pice-white uppercase font-bold text-sm px-10 py-3 tracking-[3px] mt-6 transition-colors">Read More</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-pice-black text-pice-white p-4">
+          <h2 class="font-extrabold text-pice-orange text-3xl ">New</h2>
+
+          <article class="my-8">
+            <a class="hover:text-pice-orange" href="#">
+              <h3 class="font-extrabold text-xl mb-2">Hydrogen VS Electric Cars</h3>
+            </a>
+            <p class="text-pice-light">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </article>
+
+          <div class="h-px bg-pice-gray"></div>
+          
+          <article class="my-8">
+            <a class="hover:text-pice-orange" href="#">
+              <h3 class="font-extrabold text-xl mb-2">The Downsides of AI Artistry</h3>
+            </a>
+            <p class="text-pice-light">What are the possible adverse effects of on-demand AI image generation?</p>
+          </article>
+
+          <div class="h-px bg-pice-gray"></div>
+
+          <article class="my-8">
+            <a class="hover:text-pice-orange" href="#">
+              <h3 class="font-extrabold text-xl mb-2">Is VC Funding Drying Up?</h3>
+            </a>
+            <p class="text-pice-light">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          </article>
+
+        </section>
+
+        <section class="lg:col-span-2 flex flex-col md:flex-row gap-8">
+
+          <article class="grid grid-cols-[1fr_1.5fr] gap-x-6">
+            <img class="row-span-3 h-full object-cover" src="/img/image-retro-pcs.jpg" alt="Foto de un ordenador retro">
+            <span class="text-4xl font-bold text-pice-red">01</span>
+            <a class="hover:text-pice-red transition-colors" href="#">
+              <h2 class="text-xl font-extrabold">Reviving Retro PCs</h2>
+            </a>
+            <p class="text-pice-gray leading-7">What happens when old PCs are given modern upgrades?</p>
+          </article>
+
+          <article class="grid grid-cols-[1fr_1.5fr] gap-x-6">
+            <img class="row-span-3 h-full object-cover" src="/img/image-top-laptops.jpg" alt="Foto macro de un teclado">
+            <span class="text-4xl font-bold text-pice-red">02</span>
+            <a class="hover:text-pice-red" href="#">
+              <h2 class="text-xl font-extrabold">Top 10 Laptops of 2022</h2>
+            </a>
+            <p class="text-pice-gray leading-7">Our best picks for various needs and budgets.</p>
+          </article>
+
+          <article class="grid grid-cols-[1fr_1.5fr] gap-x-6">
+            <img class="row-span-3 h-full object-cover" src="/img/image-gaming-growth.jpg" alt="Foto de un mando volando">
+            <span class="text-4xl font-bold text-pice-red">03</span>
+            <a class="hover:text-pice-red" href="#">
+              <h2 class="text-xl font-extrabold">The Growth of Gaming</h2>
+            </a>
+            <p class="text-pice-gray leading-7">How the pandemic has sparked fresh opportunities.</p>
+          </article>
+
+        </section>
+
+      </main>
+
+
+
+
+
+    </div>    
+
+  </body>
+</html>

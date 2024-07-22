@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* input:user-invalid {
+  outline: 4px solid crimson;
+} */

@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import Title from './Title.astro';
+import type { Project } from '../content/config';
+
+
+type Props = {
+  project: Project;
+  slug: string;
+}
+
+const { project, slug } = Astro.props;
+---
+
+
+<article class="flex">
+  <div class="bg-white p-8 flex-[3]">
+    <a href={`/projects/${slug}`}>
+      <Title class="mb-0 text-blue-700" level="h2">{project.title}</Title>
+    </a>
+    <Title class="mt-1 text-sm" level="h3">{project.rol}</Title>
+    <p>{project.description}</p>
+  </div>
+
+  <div class="flex-[2]">
+    <a href={`/projects/${slug}`}>
+      <Image class="h-full object-cover object-left" src={project.img.src} alt={project.img.alt} width={322} height={404} transition:name={project.img.src} />
+    </a>
+  </div>
+</article>

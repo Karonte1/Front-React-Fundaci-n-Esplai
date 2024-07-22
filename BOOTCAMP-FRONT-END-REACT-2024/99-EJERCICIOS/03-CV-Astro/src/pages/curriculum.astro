@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "../components/ExperienceItem.astro"
+import Title from "../components/Title.astro"
+import MainLayout from "../layout/MainLayout.astro";
+import { getEntry } from "astro:content"
+
+const { data: experiences } = await getEntry('experiences', 'experience-data');
+
+
+---
+
+<MainLayout miTitulo="Ivan Luengo - Currículum">
+	<div class="w-full bg-beige-dark ">
+
+		<section class="w-3/4 max-w-5xl mx-auto my-12">
+
+			<Title class="text-center no-underline font-dark" decoration="square">Currículum</Title>
+	
+			<p class="mb-12">Párrafo. Haz clic aquí para agregar tu propio texto y editarlo. Es fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar la fuente. En este espacio puedes contar tu historia y permitir que los usuarios sepan más sobre ti.</p>
+
+			<div class="flex flex-col gap-8">
+ 
+			{
+				experiences.map(experience => <ExperienceItem experience={experience} />)
+			}
+			
+			</div>
+
+
+		</section>
+
+
+
+
+
+	</div>
+</MainLayout>

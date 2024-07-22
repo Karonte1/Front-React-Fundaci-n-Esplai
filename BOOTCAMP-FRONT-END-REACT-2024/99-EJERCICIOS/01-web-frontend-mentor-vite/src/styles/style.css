@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter/Inter-Variable_slnt,wght.ttf');
+}
+
+.input {
+  @apply border-2 border-gray-300 py-2 px-4 rounded-full focus:outline-indigo-300;
+}
+
+
+.test1 {
+  @apply border-2 border-red-500;
+}
+.test2 {
+  @apply border-2 border-blue-500;
+}
+.test3 {
+  @apply border-2 border-green-500;
+}
+
+
+
+.toggle:checked + label .close-icon {
+  display: block;
+}
+.toggle:checked + label  .toggle-icon {
+  display: none;
+}

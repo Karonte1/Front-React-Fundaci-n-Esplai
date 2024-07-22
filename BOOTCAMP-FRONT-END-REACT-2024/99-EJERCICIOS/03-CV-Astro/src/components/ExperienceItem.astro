@@ -1,0 +1,24 @@
+---
+import Title from './Title.astro';
+import type { Experience } from '../content/config';
+
+type Props = {
+  experience: Experience;
+}
+
+const { experience } = Astro.props;
+---
+
+
+<article class="flex bg-white p-8 gap-8">
+  <div class=" flex-[2]">
+    <Title class="m-0 text-blue-700" level="h2">{experience.date}</Title>
+    <Title class="mt-1 text-base" level="h3">{experience.rol}</Title>
+    <Title class="mt-1 text-sm font-normal" level="h4">{experience.company}</Title>
+    <Title class="mt-1 text-sm font-normal" level="h4">{experience.location}</Title>
+  </div>
+  
+  <div class="flex-[4]">
+    <p>{experience.description}</p>    
+  </div>
+</article>

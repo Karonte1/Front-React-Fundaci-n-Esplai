@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <title>Selectores CSS</title>
+</head>
+<body>
+
+  <main class="container">
+    <h1>Selectores CSS</h1>
+
+    <details>
+      <summary>
+        <h2 class="inline">Hermanos</h2>
+      </summary>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, tenetur.</p>
+
+      <h3>Título 3</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, provident.</p>
+
+      <h4>Titulo 4</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, distinctio!</p>
+    </details>
+
+    <details>
+      <summary>
+        <h2 class="inline">Hijos</h2>
+      </summary>
+
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2
+          <ol>
+            <li>Subitem 1</li>
+            <li class="especial">Subitem 2</li>
+            <li>Subitem 3</li>
+          </ol>
+        </li>
+        <li class="especial">Item 3</li>
+        <li>Item 4</li>
+      </ul>
+
+    </details>
+
+    <details>
+      <summary>
+        <h2 class="inline">Pseudoclases</h2>
+      </summary>
+
+      <h3>Pseudoclases de cambio de estado</h3>
+
+      <h4>:hover 👉  Al pasar por encima</h4>      
+      <button class="btn btn-hover">Click</button>
+      
+      <h4>:active 👉  Mientras estés clicando</h4>
+      <button class="btn btn-active">Click</button>
+
+      <h4>:focus 👉  Cuando hacemos foco YA SEA CON EL TABULADOR O CON EL MOUSE</h4>
+      <button class="btn btn-focus">Click</button>
+      <input type="text">
+      
+      <h4>:focus-visible 👉  Cuando hacemos foco SOLO CON EL TABULADOR</h4>
+      <button class="btn btn-focus-visible">Click</button>
+
+      <p>Para los enlaces tenemos también :active y :visited</p>
+
+      <a href="https://google.com" target="_blank">Enlace</a>
+      
+      <hr>
+      <h3>Pseudoclases por posición</h3>
+
+      <table class="tabla-1">
+        <tr>
+          <th>Nombre</td>
+          <th>Apelidos</td>
+          <th>Edad</td>
+        </tr>
+        <tr>
+          <td>Ivan</td>
+          <td>Luengo</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>Jessica</td>
+          <td>Hernández</td>
+          <td>39</td>
+        </tr>
+        <tr>
+          <td>Álvaro</td>
+          <td>Martínex</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>María</td>
+          <td>López</td>
+          <td>35</td>
+        </tr>
+      </table>
+
+      <table class="tabla-2">
+        <tr>
+          <th>Nombre</td>
+          <th>Apelidos</td>
+          <th>Edad</td>
+        </tr>
+        <tr>
+          <td>Ivan</td>
+          <td>Luengo</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>Jessica</td>
+          <td>Hernández</td>
+          <td>39</td>
+        </tr>
+        <tr>
+          <td>Álvaro</td>
+          <td>Martínex</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>María</td>
+          <td>López</td>
+          <td>35</td>
+        </tr>
+      </table>
+
+      <table class="tabla-3">
+        <tr>
+          <th>Nombre</td>
+          <th>Apelidos</td>
+          <th>Edad</td>
+        </tr>
+        <tr>
+          <td>Ivan</td>
+          <td>Luengo</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>Jessica</td>
+          <td>Hernández</td>
+          <td>39</td>
+        </tr>
+        <tr>
+          <td>Álvaro</td>
+          <td>Martínex</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>María</td>
+          <td>López</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>María</td>
+          <td>López</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>María</td>
+          <td>López</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>María</td>
+          <td>López</td>
+          <td>35</td>
+        </tr>        
+      </table>
+
+      <ul class="lista-1">
+        <li class="item">Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3
+          <ol>
+            <li class="item">Subitem 1</li>
+            <li>Subitem 2</li>
+            <li>Subitem 3</li>
+          </ol>
+        </li>
+        <li class="item">Item 4</li>
+        <li class="item">Item 5</li>
+      </ul>
+
+      <div class="caja-first-of-type">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, ad.</p>
+
+        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, at. Asperiores nisi maiores voluptatum tempora?</p>
+      </div>
+
+      <h3>Pseudoclase de negación</h3>
+
+      <ul class="lista-negacion">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li class="este-no">Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+      </ul>
+
+      <nav class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+
+    </details>
+
+    <details>
+      <summary>
+        <h2 class="inline">Truquito Pseudoclases</h2>
+      </summary>
+
+      <p>Con las pseudoclases podemos hacer un truco para estilizar a un hijo o hermano, si le cambia el estado a otro elemento</p>
+
+      <div class="caja-truquito">
+        <p>Soy un parrafo pequeño</p>
+      </div>
+
+      <h2 class="titulo-truquito">Tócame y el párrafo de debajo cambia</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ab nihil cum ut repudiandae, explicabo voluptates, neque sequi molestiae officiis ea, sit pariatur quia. Dolor numquam corporis placeat reiciendis repudiandae.</p>
+
+      <input class="checkbox-truquito" id="accept" type="checkbox">
+      <label for="accept">¿Aceptas?</label>
+
+
+    </details>
+
+    <details>
+      <summary>
+        <h2 class="inline">Pseudoclases nuevas</h2>
+      </summary>
+
+      <h3>:has()</h3>
+
+      <div class="padre-has">
+
+        <div class="hijo-has"></div>
+
+      </div>
+    </details>
+
+    <details open>
+      <summary>
+        <h2 class="inline">Pseudoelementos</h2>
+      </summary>
+
+      <h3>::selection</h3>
+
+      <p class="selection">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, tempora assumenda ea necessitatibus accusantium perspiciatis, maxime magnam aut optio hic error iure repudiandae accusamus eaque aspernatur iusto vel itaque numquam?</p>
+
+      <h3>::first-line</h3>
+      <p class="primera-linea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error similique, dolore optio repudiandae dolor maxime iste unde explicabo quia eaque quidem reiciendis ipsam voluptatum? Deleniti voluptatum explicabo saepe debitis numquam.</p>
+
+      <h3>::first-letter</h3>
+      <p class="primera-letra">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error similique, dolore optio repudiandae dolor maxime iste unde explicabo quia eaque quidem reiciendis ipsam voluptatum? Deleniti voluptatum explicabo saepe debitis numquam.</p>
+
+      <h3>::placeholder</h3>
+      <input class="placeholder" type="text" placeholder="Nombre...">
+
+      <h3>::marker</h3>
+      <ul class="lista-marker">
+        <li class="primero">Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+
+      <h3>::before y ::after</h3>
+
+
+      <h4 class="supertitulo">
+        <span class="antes"></span>
+        Soy un supertítulo
+        <span class="despues"></span>
+      </h4>
+
+      <h5 class="supertitulo-cool">Otro supertituloz</h5>
+
+      <h6 class="supertitulo-cool">Soy otro titulo h6</h6>
+
+
+
+    </details>
+
+
+  </main>
+  
+</body>
+</html>

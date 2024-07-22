@@ -1,0 +1,65 @@
+/*? CUSTOM PROPERTIES  */
+
+:root {
+  /* Creamos las variables con 2 guiones */
+  --color-principal: indigo;
+  --fuente-principal: 'Montserrat';
+
+  --color-boton-hue: 50;
+  --color-boton-saturation: 50%;
+  --color-boton-lightness: 50%;  
+
+  --color-boton-hover: hsl(0 50% 60%);
+  --padding-base: 0.3rem;
+}
+
+
+h2 {
+  --color-principal: indigo;
+  
+  /* Usamos las variables con la funcion var() */
+  color: var(--color-principal);
+
+  /* la funcion var() permite un segundo parámetro como FALLBACK, es decir, un valor por defecto si no existiera esa variable */
+  text-decoration: var(--subrayado, underline);
+  font-family: var(--fuente-principal), sans-serif;
+}
+
+li::marker {
+  color: var(--color-principal);
+}
+
+.barra {
+  height: 3px;
+  background-color: var(--color-principal);
+}
+
+strong {
+  color: var(--color-principal);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid var(--color-principal);
+  padding: 0.3rem;
+}
+
+
+button {
+  --color-boton: var(--color-boton-hue) var(--color-boton-saturation) var(--color-boton-lightness);
+
+
+  background-color: hsl(var(--color-boton));
+  color: white;
+  padding: var(--padding-base);
+  border: none;
+  font-size: 1.5rem;
+  margin-block: 1rem;
+}
+
+button:hover {
+  background-color: hsl(var(--color-boton) / 0.5);
+}

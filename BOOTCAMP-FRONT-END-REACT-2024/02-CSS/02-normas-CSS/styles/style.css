@@ -1,0 +1,49 @@
+/*? NORMAS "BASICAS" DE CSS */
+
+/** Norma 1 (ESPECIFICIDAD): Aquel selector que sea MÁS ESPECÍFICO ganará al que sea MENOS ESPECÍFICO  */
+
+/* Especificidad     ( 0 ,  0 ,  0 )      */
+
+/* El primer valor ==>    IDs */
+/* El segundo valor ==>   clases y atributos */
+/* El tecer valor ==>     etiquetas */
+
+/* ( 0 , 1 ,  3) */
+div + section > p.caja {
+}
+
+/* ( 0 , 0 ,  1) */
+p {
+  color: green;
+}
+
+/* ( 0 , 1 , 0) */
+.caja {
+  color: royalblue;
+}
+
+/* ( 1 , 0 , 0) */
+#supercaja {
+  color: purple;
+}
+
+input[type='email'].input {
+}
+
+/** Norma 2: CSS (Cascade Style Sheet) son reglas que van en CASCADA, es decir de arriba a abajo por lo tanto  */
+/*! TODO LO QUE ESTÁ MÁS ABAJO GANA A LO QUE ESTÁ MÁS ARRIBA */
+
+/** EN CONCLUSIÓN: Todo lo que esté más abajo CON LA MISMA ESPECIFICIDAD gana a lo que está más arriba. Si tuviera más especificidad siempre ganará el más específico  */
+
+#supertitulo {
+  color: orange;
+}
+
+.titulo {
+  color: hotpink;
+}
+
+/* La palabra !important gana a absolutamente todo */
+h3 {
+  color: lightseagreen !important;
+}

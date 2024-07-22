@@ -1,0 +1,16 @@
+---
+import PostsMenu from "../components/PostsMenu.astro"
+import MainLayout from "./MainLayout.astro";
+const { frontmatter } = Astro.props;
+const { title } = frontmatter;
+---
+
+<MainLayout title={title}>
+
+  <PostsMenu />
+
+  <div class="prose">
+    <slot />
+  </div>
+  
+</MainLayout>

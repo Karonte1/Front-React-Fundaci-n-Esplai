@@ -1,0 +1,122 @@
+.caja {
+  width: 150px;
+  height: 150px;
+  margin-block: 3rem;
+  background-color: cornflowerblue;
+  border: 4px solid black;   
+}
+
+
+
+.rotacion {
+  animation-name: rotacionCaja;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+
+  animation-iteration-count: infinite;
+  animation-iteration-count: 6;
+  animation-iteration-count: 1;
+
+  animation-direction: reverse; 
+  animation-direction: alternate-reverse; 
+  animation-direction: alternate;
+  animation-direction: normal; /* por defecto */
+  
+  
+  animation-fill-mode: forwards;
+}
+
+
+/* todas las animaciones tienen una duración */
+/* los keyframes son puntos concretos dentro de esa duración */
+@keyframes rotacionCaja {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 45deg;
+  }
+}
+
+
+
+.movimiento {
+  /* shorthand */
+
+
+  animation: movimientoCaja 1s infinite alternate forwards ease-in-out;
+}
+
+@keyframes movimientoCaja {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: 100px;
+  }
+}
+
+
+.varios-1 {
+  animation: varios1 1s ease alternate infinite;
+}
+
+/* Si en la posición inicial YA SE ENECUENTRA EN EL ESTADO QUE QUIERES no hace falta que lo pongas! */
+@keyframes varios1 {
+  to {
+    translate: 10px;
+    scale: 1.2;
+    background-color: gold;
+  }
+}
+
+
+/* puedes añadir tantos keyframes en la animación como quieras */
+
+.padre {
+  position: relative;
+}
+
+.hijo {
+  width: 25px;
+  height: 25px;
+  background: hotpink;
+  position: absolute;
+
+  animation: vueltaAlRuedo 2s infinite ease;
+}
+
+
+@keyframes vueltaAlRuedo {
+  from {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    left: 100%;
+    top: 0;
+    translate: -100%;
+  }
+
+  50% {
+    left: 100%;
+    top: 100%;
+    translate: -100% -100%;
+  }
+
+  75% {
+    top: 100%;
+    left: 0;
+    translate: 0 -100%;
+  }
+
+  to {
+    top: 0; 
+    left: 0;
+  }
+
+}

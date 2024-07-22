@@ -1,0 +1,17 @@
+---
+type Props = {
+  sidebar?: boolean;
+}
+
+const { sidebar } = Astro.props;
+
+const classes = sidebar ? 'flex flex-col *:text-2xl font-bold items-center' : 'hidden md:flex *:text-lg';
+
+---
+
+<nav class={`gap-4 uppercase ${classes}`}>
+  <a href="/">Sobre mí</a>
+  <a href="/curriculum">Currículum</a>
+  <a href="/projects">Proyectos</a>
+  <a href="/contact">Contacto</a>
+</nav>

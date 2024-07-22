@@ -1,0 +1,57 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import Title from "../components/Title.astro";
+import Button from "../components/Button.astro"
+import { Image } from "astro:assets"
+import Sidebar from "../components/Sidebar.astro"
+---
+
+<MainLayout miTitulo="Ivan Luengo - Sobre mí">
+	<div class="wrapper grow flex items-center justify-center bg-fondo-home-ver md:bg-fondo-home-hor">
+		
+		<section class="w-3/4 max-w-5xl flex flex-col md:flex-row">
+			<div class="flex flex-col gap-8 justify-center items-center bg-beige p-6 flex-[3] shadow-xl">
+				<Image class="rounded-full" src="https://avatars.githubusercontent.com/u/10440026?v=4" alt="Foto de avatar de Ivan Luengo" width={150} height={150}/>
+				<h1 class="font-black font-montserrat text-3xl">Ivan Luengo</h1>
+				<div class="w-24 h-1 bg-blue-700"></div>
+	
+				<h2>PROFESOR DE PROGRAMACIÓN</h2>
+				<div>
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="fa-brands fa-twitter"></i></a>
+					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+				</div>
+			</div>
+	
+	
+	
+			<div class="flex flex-col gap-8 p-6 flex-[5]">
+				<span class="animate__animated animate__backInDown font-montserrat text-6xl font-black">Hola</span>
+	
+				<h2 class="font-bold font-3xl">Esto es lo que soy y lo que hago</h2>
+	
+				<div class="flex gap-4">
+					<Button>Currículum</Button>
+					<Button invert>Proyectos</Button>
+				</div>
+	
+				<p>Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar la fuente.</p>
+	
+				<p>Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.
+	
+				</p>
+	
+			</div>
+		</section>
+</div>
+
+</MainLayout>
+
+
+<style>
+	/* .wrapper {
+		background-image: linear-gradient(to right, #e5dace 30%, white 30%);
+	} */
+
+</style>

@@ -1,0 +1,10 @@
+{
+  "nombre": "Ivan",
+  "edad": 37,
+  "isMarried": true,
+  "amigos": ["Jess", "Carlos"],
+  "caracteristicas": {
+    "pelo": "rubio",
+    "ojos": "verdes"
+  }
+}

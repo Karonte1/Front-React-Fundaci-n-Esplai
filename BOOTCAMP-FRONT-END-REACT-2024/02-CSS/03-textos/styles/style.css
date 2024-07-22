@@ -1,0 +1,104 @@
+/** Resumen  */
+
+.resumen-1 {
+  font-family: 'Arial', sans-serif;
+  font-weight: 400; /* 100 - 900 */
+  font-style: normal;
+  font-style: italic;
+
+  text-decoration: underline;
+  text-decoration: line-through;
+  text-decoration: underline red;
+  text-decoration: underline dashed red;
+  text-decoration: underline dotted red;
+  text-decoration: none; /* quitar subrayados */
+
+  text-transform: uppercase;
+  text-transform: lowercase;
+
+  font-size: 20px; /* por defecto 16px */
+  line-height: 1.2;
+
+  letter-spacing: -2px;
+  letter-spacing: 3px;
+
+  text-align: left;
+  text-align: right;
+  text-align: center;
+  text-align: justify;
+}
+
+/** line -height  */
+
+.line-height-fijo {
+  line-height: 25px;
+}
+
+.line-height-dinamico {
+  line-height: 1.6;
+}
+
+/* fallback ==> si no va bien lo primero, usa esto */
+
+.serif {
+  font-family: 'Georgia', serif;
+}
+
+.sans {
+  font-family: 'Poetsen One', sans-serif;
+}
+
+.mono {
+  font-family: 'Courier New', monospace;
+}
+
+.embed {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.embed-2 {
+  font-family: 'Open Sans', sans-serif;
+  /* font-style: italic; */
+}
+
+/* Normalmente para cargar todas las fuentes, lo solemos hacer en un archivo independiente, en este caso se llama fonts.css */
+
+@font-face {
+  font-family: 'Adventure';
+  src: url('../assets/fonts/adventure/Adventure.otf');
+}
+
+.indiana {
+  font-family: 'Adventure', sans-serif;
+}
+
+.regular {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+}
+
+.italic {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bold {
+  font-family: 'Crimson Text', serif;
+  font-weight: 700;
+}
+
+.bold-italic {
+  font-family: 'Crimson Text', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.variable {
+  font-family: 'Montserrat';
+  font-weight: 450;
+
+  /* si tuviéramos una fuente variable extraña deberíamos cambiarle sus propiedades con la siguiente propiedad */
+  font-feature-settings: 'XTRA' 57 'wght' 370;
+}

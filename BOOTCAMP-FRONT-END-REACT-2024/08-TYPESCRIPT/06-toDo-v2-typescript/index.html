@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do v2.0</title>
+  </head>
+  <!-- Opción con background en body -->
+  <!-- <body class="min-h-screen bg-[url('/img/bg-mobile-light.jpg')] md:bg-[url('/img/bg-desktop-light.jpg')]  bg-no-repeat "> -->
+  <body class="min-h-screen">
+
+    <!-- Opción con etiqueta img  -->
+    <!-- <div class="absolute top-0 w-full -z-10">
+      <img class="w-full" src="/img/bg-mobile-light.jpg" alt="">
+    </div> -->
+
+    <!-- Opción con background en una caja div -->
+
+    <div class="absolute w-full top-0 -z-10 h-64 md:h-52 bg-[url('/img/bg-mobile-light.jpg')] md:bg-[url('/img/bg-desktop-light.jpg')] bg-cover"></div>
+
+    <div class="max-w-xl px-6 mx-auto my-8">
+      <h1 class="text-3xl font-bold tracking-[10px] mb-12">TODO</h1>   
+      
+      <form class="main-form">
+        <input class="input-task w-full px-6 py-3 mb-4 bg-white rounded" type="text" placeholder="Create a new todo..." name="task">
+      </form>
+
+      <section class="toDo-list mb-1 overflow-hidden border rounded shadow-lg">
+
+        <!-- <article class="flex items-center gap-3 bg-white px-6 py-3 border-b-[1px] border-gray-300">
+          <label class="flex items-center justify-center border border-black rounded-full cursor-pointer size-5 hover:border-indigo-500">
+            <input class="hidden peer" type="checkbox">
+            <svg class="hidden text-green-500 peer-checked:block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 8"><path fill="none" stroke="currentColor" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+          </label>
+          <span>Pasear a las perras</span>
+          <button class="ml-auto">
+            <svg class="hover:text-indigo-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="currentColor" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+          </button>
+        </article> -->
+
+        <!-- <article class="flex items-center gap-3 px-6 py-3 bg-white ">
+          <label class="flex items-center justify-center border border-black rounded-full cursor-pointer size-5 hover:border-indigo-500">
+            <input class="hidden peer" type="checkbox" checked>
+            <svg class="hidden text-green-500 peer-checked:block size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 8"><path fill="none" stroke="currentColor" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+          </label>
+          <span class="text-gray-400 line-through">Estudiar JavaScript</span>
+          <button class="ml-auto">
+            <svg class="hover:text-indigo-500" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="currentColor" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+          </button>
+        </article> -->
+
+      </section>
+
+      <section class="flex justify-between px-6 py-3 bg-white border rounded shadow-lg">
+        <span class="text-gray-400"><span class="uncompleted-counter"></span> items left</span>
+        <button class="hover:text-indigo-500">Clear Completed</button>
+      </section>
+
+      <section class="flex justify-center gap-4 px-6 py-3 mt-4 bg-white border rounded shadow-lg">
+        <button class="filter-all hover:text-indigo-500">All</button>
+        <button class="filter-active hover:text-indigo-500">Active</button>
+        <button class="filter-completed hover:text-indigo-500">Completed</button>
+      </section>
+
+
+    </div>
+
+<!--     
+    <div class="bg-red-200 p-4 rounded w-max fixed right-2 top-2 flex gap-4">
+      <span>❌</span>
+      <span class="text-red-400">Mensaje de error</span>
+    </div> -->
+
+    
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
